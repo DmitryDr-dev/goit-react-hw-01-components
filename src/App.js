@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// data
+import userData from './data/user.json';
+
+// components
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Profile
+      imageUrl={userData.avatar}
+      userName={userData.name}
+      tag={userData.tag}
+      location={userData.location}
+      followers={userData.stats.followers}
+      views={userData.stats.views}
+      likes={userData.stats.likes}
+    ></Profile>
   );
 }
 
