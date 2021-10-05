@@ -1,0 +1,25 @@
+.transactionHistory {
+  border-collapse: collapse;
+}
+
+.tableCell {
+  /* text-align: center; */
+  /* outline: 1px solid red; */
+  padding: 10px 65px;
+  border: 1px solid #000;
+}
+
+.tableHeadCell {
+  composes: tableCell;
+  background-color: var(--secondary-bg);
+  color: var(--secondary-font-color);
+}
+
+.tableCellData {
+  composes: tableCell;
+  text-align: center;
+}
+
+.tableRow:nth-child(2n) {
+  background: #e8edff;
+}
