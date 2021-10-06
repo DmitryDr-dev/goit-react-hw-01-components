@@ -15,18 +15,18 @@ function App() {
   return (
     <Container>
       <Profile
-        imageUrl={userData.avatar}
-        userName={userData.name}
-        tag={userData.tag}
-        location={userData.location}
-        followers={userData.stats.followers}
-        views={userData.stats.views}
-        likes={userData.stats.likes}
-      ></Profile>
+        imageUrl={userData?.avatar}
+        userName={userData?.name}
+        tag={userData?.tag}
+        location={userData?.location}
+        followers={userData?.stats?.followers}
+        views={userData?.stats?.views}
+        likes={userData?.stats?.likes}
+      />
 
-      <Statistics items={statisticsData}></Statistics>
-      <FriendsList friends={friendsData}></FriendsList>
-      <Transactions transactions={transactionsData}></Transactions>
+      <Statistics title="Upload Stats" items={statisticsData} />
+      <FriendsList friends={friendsData} />
+      <Transactions transactions={transactionsData} />
     </Container>
   );
 }

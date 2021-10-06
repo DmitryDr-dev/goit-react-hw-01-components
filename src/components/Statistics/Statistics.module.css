@@ -1,3 +1,7 @@
+.statistics {
+  padding: 50px 0;
+}
+
 .statsList {
   display: flex;
   list-style: none;

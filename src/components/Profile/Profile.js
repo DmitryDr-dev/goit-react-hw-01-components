@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import s from './Profile.module.css';
 
 function Profile({
-  imageUrl,
-  userName,
-  tag,
-  location,
+  imageUrl = 'https://via.placeholder.com/350',
+  userName = 'User Name',
+  tag = 'n/a',
+  location = 'n/a',
   followers,
   views,
   likes,
