@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
+import StaticsItem from '../Statisticsitem/StatisticsItem';
 
 function Statistics({ title, items }) {
   return (
@@ -8,9 +9,8 @@ function Statistics({ title, items }) {
 
       <ul className={s.statsList}>
         {items.map(({ id, label, percentage }) => (
-          <li key={id} className={s.item}>
-            <span className={s.label}>{label}</span>
-            <span className={s.percentage}>{percentage}%</span>
+          <li key={id}>
+            <StaticsItem label={label} percentage={percentage} />
           </li>
         ))}
       </ul>
@@ -22,8 +22,6 @@ Statistics.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
     }),
   ),
 };

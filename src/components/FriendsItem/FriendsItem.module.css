@@ -1,0 +1,24 @@
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.statusTrue {
+  composes: status;
+  background-color: green;
+}
+
+.statusFalse {
+  composes: status;
+  background-color: red;
+}
+
+.avatar {
+  margin: 0 15px;
+}
