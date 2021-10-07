@@ -14,7 +14,7 @@ function FriendsList({ friends }) {
   );
 }
 
-FriendsList.prototypes = {
+FriendsList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
